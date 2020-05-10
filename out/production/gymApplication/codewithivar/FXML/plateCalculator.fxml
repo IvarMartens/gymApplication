@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="codewithivar.controllers.ControllerHome">
+   <bottom>
+      <Button fx:id="goToHome" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #525252;" text="Go back to main screen" textFill="WHITE" BorderPane.alignment="BOTTOM_RIGHT">
+         <effect>
+            <Glow />
+         </effect>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+   </bottom>
+   <top>
+      <TitledPane animated="false" collapsible="false" text="One Rep Max" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="598.0" />
+         </content>
+      </TitledPane>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="307.0" prefWidth="235.0">
+               <children>
+                  <Label text="Weight used:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label text="Bar used:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelError" prefHeight="38.0" prefWidth="248.0" textFill="RED" visible="false" />
+                  <Label fx:id="labelError2" textFill="RED" visible="false" />
+                  <Label fx:id="labelPlates" prefHeight="176.0" prefWidth="235.0" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="50.0" top="40.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="287.0" prefWidth="254.0">
+               <children>
+                  <TextField fx:id="textFieldWeight" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="181.0" promptText="weight">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin></TextField>
+                  <HBox prefHeight="54.0" prefWidth="245.0">
+                     <children>
+                        <RadioButton fx:id="fifteenRadioButton" mnemonicParsing="false" onAction="#onActionResult" text="15 Kg bar" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="40.0" right="10.0" top="30.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="twentyRadioButton" mnemonicParsing="false" onAction="#onActionResult" text="20 Kg bar" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" top="30.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <Button fx:id="calculatePlates" mnemonicParsing="false" onAction="#onActionResultPlates" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: #525252;" text="Calculate plates" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets left="40.0" top="30.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets top="60.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
